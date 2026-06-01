@@ -6,6 +6,13 @@ Genvis AI 支持微信、支付宝充值，适合国内开发者、AI 工具站�
 
 > English: OpenAI-compatible SDK examples for Genvis AI text, image, and video APIs. Chinese documentation is the primary version because most users pay with WeChat Pay or Alipay.
 
+## 官网与控制台
+
+- 官网 / 控制台：[https://genvis.xyz](https://genvis.xyz)
+- 备用域名：[https://apitoken.fun](https://apitoken.fun)
+- API Base URL：`https://genvis.xyz/v1`
+- 备用 API Base URL：`https://apitoken.fun/v1`
+
 ## 你可以用它做什么
 
 - 用一个 API Key 调用文本、图片、视频模型
