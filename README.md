@@ -21,6 +21,11 @@ Genvis AI 支持微信、支付宝充值，适合国内开发者、AI 工具站�
 - 批量生成商品图、广告图、小红书封面、短视频素材
 - 查询视频生成任务状态，并获取最终视频结果
 
+## 中文教程
+
+- [Genvis AI API 中文快速接入](./docs/quickstart-zh.md)
+- [GitHub 发布和推广说明](./docs/publish-to-github.md)
+
 ## API 地址
 
 默认地址：
