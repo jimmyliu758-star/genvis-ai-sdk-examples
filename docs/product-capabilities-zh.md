@@ -2,6 +2,8 @@
 
 Genvis AI 面向开发者、AIGC 从业者、AI 工具站、内容团队和电商素材团队，提供统一的大模型图文视频能力。你可以先在官网可视化界面体验效果，也可以直接通过 API 把能力接入自己的产品和自动化工作流。
 
+本页描述的是对外公开展示的能力与体验路径，不包含平台后端实现、模型路由、计费策略和内部运营系统。
+
 新用户注册即享 **2 美元免费试用额度**，可零成本体验全部大模型图文视频能力。价格非常低，例如 **gpt-image 2 低至 ¥0.2**，适合从个人试用、团队验证到批量生产逐步放量。
 
 ## 官网与入口
@@ -11,6 +13,7 @@ Genvis AI 面向开发者、AIGC 从业者、AI 工具站、内容团队和电�
 - API Base URL：`https://genvis.xyz/v1`
 - 备用 API Base URL：`https://apitoken.fun/v1`
 - GitHub 示例仓库：[genvis-ai-sdk-examples](https://github.com/jimmyliu758-star/genvis-ai-sdk-examples)
+- 前端界面展示建议：[frontend-showcase-zh.md](./frontend-showcase-zh.md)
 
 ## 全量支持旗舰 AI 模型
 

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Genvis AI API SDK and runnable examples for text, image, and video generation.",
+  "description": "Genvis AI frontend showcase and public API examples for text, image, and video generation.",
   "scripts": {
     "chat": "node examples/node/chat.mjs",
     "image": "node examples/node/image-generation.mjs",

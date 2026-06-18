@@ -4,6 +4,8 @@
 
 如果你还不确定提示词、风格或视频参数，可以先在 Genvis AI 官网用可视化界面生成图片或视频，确认效果后再把稳定参数迁移到 API。
 
+本仓库只提供公开 API 的轻量接入示例和部分前端体验说明，不开放完整平台源码、后端实现、计费系统或模型路由逻辑。
+
 ## 1. 注册并领取免费额度
 
 - 官网 / 控制台：[https://genvis.xyz](https://genvis.xyz)
@@ -197,5 +199,6 @@ Authorization: Bearer YOUR_API_KEY
 ## 10. 下一步
 
 - 想了解完整产品能力：阅读 [产品能力全景](./product-capabilities-zh.md)
+- 想规范对外截图范围：阅读 [前端界面展示建议](./frontend-showcase-zh.md)
 - 想直接试用可视化生图/生视频：打开 [Genvis AI 官网](https://genvis.xyz)
 - 想把示例放进自己的项目：从 `sdk/node/genvis-client.mjs` 或 `sdk/python/genvis_client.py` 开始改造

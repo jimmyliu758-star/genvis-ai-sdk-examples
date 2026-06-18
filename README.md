@@ -1,10 +1,12 @@
-# Genvis AI SDK Examples / API 接入示例
+# Genvis AI Frontend Showcase / API Examples
 
-面向开发者、AI 工具站和 AIGC 团队的 Genvis AI API 示例仓库。这里提供可直接运行的 Node.js、Python、cURL 示例，帮助你用统一接口调用文本推理、图像生成、视频生成等旗舰 AI 模型，并把能力快速接入自己的产品、工作流或素材生产系统。
+面向开发者、AI 工具站和 AIGC 团队的 Genvis AI 对外展示与轻量接入示例仓库。这里仅展示部分前端使用场景、公开 API 调用样例和官网试用入口，帮助访客快速了解 Genvis AI 的图文视频能力。
+
+本仓库不是完整产品开源仓库，不包含平台后端、模型路由、计费系统、用户系统、管理后台、生产配置、商业策略或任何密钥信息。
 
 新用户注册 Genvis AI 即享 **2 美元免费试用额度**，可以零成本体验大模型文本、图片、视频能力。价格非常低，例如 **gpt-image 2 低至 ¥0.2**，适合先验证效果，再按需放量。
 
-> English: OpenAI-compatible Genvis AI SDK examples for text reasoning, image generation, and video generation. Chinese documentation is the primary version because most users pay with WeChat Pay or Alipay.
+> English: Frontend showcase and OpenAI-compatible public API examples for Genvis AI text reasoning, image generation, and video generation. Chinese documentation is the primary version because most users pay with WeChat Pay or Alipay.
 
 ## 官网入口
 
@@ -14,6 +16,25 @@
 - 备用 API Base URL：`https://apitoken.fun/v1`
 - 中文快速接入：[docs/quickstart-zh.md](./docs/quickstart-zh.md)
 - 产品能力全景：[docs/product-capabilities-zh.md](./docs/product-capabilities-zh.md)
+- 前端界面展示建议：[docs/frontend-showcase-zh.md](./docs/frontend-showcase-zh.md)
+
+## 公开展示边界
+
+这个仓库的目标是让浏览 GitHub 的开发者和 AIGC 从业者理解官网能做什么，并引导他们去官网试用，而不是开放完整平台实现。
+
+可以公开展示：
+
+- 官网首页、模型能力页、可视化生图页、可视化生视频页等部分前端界面
+- 公开 API 的最小调用示例和参数说明
+- Node.js、Python、cURL 的轻量接入样例
+- 新用户福利、价格示例、官网入口和控制台入口
+
+不公开展示：
+
+- 后端服务源码、模型调度策略、供应商路由逻辑
+- 用户、订单、计费、风控、权限、管理后台等核心业务实现
+- 生产环境配置、接口密钥、内部账号、真实用户数据
+- 完整商业运营方案、成本模型和供应商账号信息
 
 ## 全量支持旗舰 AI 模型
 
@@ -29,7 +50,7 @@ Genvis AI 聚合主流大模型能力，开发者可以用一个 API Key 调用�
 
 ### 1. 标准化 API 调用
 
-本仓库重点覆盖代码接入路径：使用 OpenAI 兼容 SDK 或 HTTP 请求调用 Genvis AI。你可以开箱即用地运行示例，并在业务系统中复用统一接口。
+本仓库只展示公开 API 的轻量接入路径：使用 OpenAI 兼容 SDK 或 HTTP 请求调用 Genvis AI。示例用于帮助开发者理解调用方式，不代表完整平台实现。
 
 - 全模型统一 API 入口，减少多供应商适配成本
 - 支持文本、图像、视频等多模态任务
@@ -61,7 +82,7 @@ Genvis AI 官网也提供可视化视频生成入口，覆盖文生视频、图�
 - 给 AI 工具站、Dify、Coze、n8n、FastGPT 等工作流提供统一模型接口
 - 批量生成商品图、广告图、小红书封面、短视频素材
 - 提交异步视频生成任务，轮询任务状态并获取最终视频结果
-- 先在官网可视化界面验证效果，再把稳定参数迁移到代码示例中
+- 先在官网可视化界面验证效果，再把稳定参数迁移到自己的业务系统中
 
 ## 接入前准备
 
