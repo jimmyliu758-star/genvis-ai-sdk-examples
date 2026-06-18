@@ -1,52 +1,75 @@
-# Genvis AI API 示例项目 / SDK Examples
+# Genvis AI SDK Examples / API 接入示例
 
-面向中文开发者的 Genvis AI API 接入示例，支持 OpenAI 兼容调用，可用于文本对话、多模态、AI 图片生成、AI 图片编辑和 AI 视频异步生成。
+面向开发者、AI 工具站和 AIGC 团队的 Genvis AI API 示例仓库。这里提供可直接运行的 Node.js、Python、cURL 示例，帮助你用统一接口调用文本推理、图像生成、视频生成等旗舰 AI 模型，并把能力快速接入自己的产品、工作流或素材生产系统。
 
-Genvis AI 支持微信、支付宝充值，适合国内开发者、AI 工具站、自媒体工具、电商素材系统和自动化工作流接入。
+新用户注册 Genvis AI 即享 **2 美元免费试用额度**，可以零成本体验大模型文本、图片、视频能力。价格非常低，例如 **gpt-image 2 低至 ¥0.2**，适合先验证效果，再按需放量。
 
-> English: OpenAI-compatible SDK examples for Genvis AI text, image, and video APIs. Chinese documentation is the primary version because most users pay with WeChat Pay or Alipay.
+> English: OpenAI-compatible Genvis AI SDK examples for text reasoning, image generation, and video generation. Chinese documentation is the primary version because most users pay with WeChat Pay or Alipay.
 
-## 官网与控制台
+## 官网入口
 
 - 官网 / 控制台：[https://genvis.xyz](https://genvis.xyz)
 - 备用域名：[https://apitoken.fun](https://apitoken.fun)
 - API Base URL：`https://genvis.xyz/v1`
 - 备用 API Base URL：`https://apitoken.fun/v1`
+- 中文快速接入：[docs/quickstart-zh.md](./docs/quickstart-zh.md)
+- 产品能力全景：[docs/product-capabilities-zh.md](./docs/product-capabilities-zh.md)
+
+## 全量支持旗舰 AI 模型
+
+Genvis AI 聚合主流大模型能力，开发者可以用一个 API Key 调用图文视频多模态能力。模型权限、价格和可用状态以控制台模型列表为准。
+
+| 能力方向 | 支持模型示例 | 典型用途 |
+| --- | --- | --- |
+| 文本推理 | Claude4.8、GPT5.5、Gemini3.5 等 | 智能问答、内容生成、Agent、知识库、工作流编排 |
+| 图像生成 | gpt-Image2、Nano Banao 2 等 | 商品图、海报、封面、广告素材、角色图、风格化创作 |
+| 视频生成 | Veo、sora2、GrokVideo 等 | 文生视频、图生视频、短视频素材、广告片段、影视级动态画面 |
+
+## 三大核心使用模式
+
+### 1. 标准化 API 调用
+
+本仓库重点覆盖代码接入路径：使用 OpenAI 兼容 SDK 或 HTTP 请求调用 Genvis AI。你可以开箱即用地运行示例，并在业务系统中复用统一接口。
+
+- 全模型统一 API 入口，减少多供应商适配成本
+- 支持文本、图像、视频等多模态任务
+- 支持批量任务、异步生成、任务轮询和结构化素材返回
+- 适合 AI 工具站、SaaS 后台、自动化脚本、Dify、Coze、n8n、FastGPT 等工作流
+
+### 2. 前端可视化界面生图
+
+不写代码也可以直接在 Genvis AI 官网使用可视化生图能力。适合设计师、运营、自媒体和电商团队快速试稿、比稿、批量产出素材。
+
+- 可视化参数调节，无需代码
+- 支持高清图像生成、风格自定义和批量出图
+- 适合小红书封面、商品主图、广告图、品牌视觉、社媒配图
+- 可先用 2 美元免费额度体验，再把稳定工作流接入 API
+
+### 3. 前端可视化界面生视频
+
+Genvis AI 官网也提供可视化视频生成入口，覆盖文生视频、图生视频和长短视频渲染。适合内容团队先验证创意，再沉淀为 API 自动化生产流程。
+
+- 支持文生视频、图生视频、长短视频渲染
+- 输出影视级画面效果和流畅动态画面
+- 适合广告分镜、产品动态展示、短视频素材、AIGC 影视预览
+- 可通过 API 查询异步视频任务状态并获取最终视频文件
 
 ## 你可以用它做什么
 
 - 用一个 API Key 调用文本、图片、视频模型
-- 用 OpenAI SDK 快速接入现有项目
+- 用 OpenAI SDK 快速接入现有项目，只需替换 `baseURL` 和 API Key
 - 给 AI 工具站、Dify、Coze、n8n、FastGPT 等工作流提供统一模型接口
 - 批量生成商品图、广告图、小红书封面、短视频素材
-- 查询视频生成任务状态，并获取最终视频结果
-
-## 中文教程
-
-- [Genvis AI API 中文快速接入](./docs/quickstart-zh.md)
-- [GitHub 发布和推广说明](./docs/publish-to-github.md)
-
-## API 地址
-
-默认地址：
-
-```text
-https://genvis.xyz/v1
-```
-
-备用地址：
-
-```text
-https://apitoken.fun/v1
-```
+- 提交异步视频生成任务，轮询任务状态并获取最终视频结果
+- 先在官网可视化界面验证效果，再把稳定参数迁移到代码示例中
 
 ## 接入前准备
 
-1. 注册并登录 Genvis AI。
-2. 使用微信或支付宝完成充值。
-3. 在控制台创建 API Key。
-4. 在模型列表或 API 文档中确认你的账号可用模型。
-5. 复制本项目 `.env.example` 为 `.env`，填入 API Key 和模型名称。
+1. 注册并登录 [Genvis AI](https://genvis.xyz)，新用户可领取 2 美元免费试用额度。
+2. 在控制台创建 API Key。
+3. 在模型列表或 API 文档中确认你的账号可用模型。
+4. 复制本项目 `.env.example` 为 `.env`，填入 API Key 和模型名称。
+5. 如需放量使用，可通过微信或支付宝充值。
 
 ```bash
 cp .env.example .env
@@ -207,6 +230,7 @@ GENVIS_VIDEO_MODEL=your-video-model
 - 跨境电商素材系统
 - Dify、Coze、n8n、FastGPT 工作流用户
 - 需要微信、支付宝充值的国内团队
+- 希望先用可视化界面试效果，再用 API 批量生产的 AIGC 团队
 
 ## 安全提醒
 
@@ -214,4 +238,4 @@ GENVIS_VIDEO_MODEL=your-video-model
 
 ## English Summary
 
-This repository provides OpenAI-compatible Genvis AI examples for Node.js, Python, and cURL. It covers chat completions, image generation, and async video generation with polling. The primary documentation is written in Chinese for domestic users who prefer WeChat Pay and Alipay.
+This repository provides OpenAI-compatible Genvis AI examples for Node.js, Python, and cURL. It covers chat completions, image generation, and async video generation with polling. New users can start with a 2 USD free trial credit, try web-based visual image or video generation, and then integrate the same model capabilities through standardized APIs.
