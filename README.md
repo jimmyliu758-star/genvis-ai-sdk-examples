@@ -14,6 +14,7 @@
 - 备用域名：[https://apitoken.fun](https://apitoken.fun)
 - API Base URL：`https://genvis.xyz/v1`
 - 备用 API Base URL：`https://apitoken.fun/v1`
+- 公开 API 文档：[docs/api/README.md](./docs/api/README.md)
 - 中文快速接入：[docs/quickstart-zh.md](./docs/quickstart-zh.md)
 - 产品能力全景：[docs/product-capabilities-zh.md](./docs/product-capabilities-zh.md)
 - 前端界面展示建议：[docs/frontend-showcase-zh.md](./docs/frontend-showcase-zh.md)

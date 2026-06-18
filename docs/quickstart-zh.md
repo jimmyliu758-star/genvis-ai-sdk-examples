@@ -199,6 +199,7 @@ Authorization: Bearer YOUR_API_KEY
 ## 10. 下一步
 
 - 想了解完整产品能力：阅读 [产品能力全景](./product-capabilities-zh.md)
+- 想看公开 API 文档：阅读 [docs/api](./api/README.md)
 - 想规范对外截图范围：阅读 [前端界面展示建议](./frontend-showcase-zh.md)
 - 想直接试用可视化生图/生视频：打开 [Genvis AI 官网](https://genvis.xyz)
 - 想把示例放进自己的项目：从 `sdk/node/genvis-client.mjs` 或 `sdk/python/genvis_client.py` 开始改造

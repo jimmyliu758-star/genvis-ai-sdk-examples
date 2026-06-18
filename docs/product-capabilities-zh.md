@@ -13,6 +13,7 @@ Genvis AI 面向开发者、AIGC 从业者、AI 工具站、内容团队和电�
 - API Base URL：`https://genvis.xyz/v1`
 - 备用 API Base URL：`https://apitoken.fun/v1`
 - GitHub 示例仓库：[genvis-ai-sdk-examples](https://github.com/jimmyliu758-star/genvis-ai-sdk-examples)
+- 公开 API 文档：[docs/api/README.md](./api/README.md)
 - 前端界面展示建议：[frontend-showcase-zh.md](./frontend-showcase-zh.md)
 
 ## 全量支持旗舰 AI 模型
@@ -92,8 +93,9 @@ Genvis AI 聚合文本推理、图像生成和视频生成模型，帮助团队�
 2. 在可视化界面体验图像生成和视频生成，确认模型效果、提示词和参数。
 3. 在控制台创建 API Key，并用 `/v1/models` 查询当前账号可用模型。
 4. 克隆本仓库，运行 Node.js、Python 或 cURL 示例。
-5. 把稳定提示词、模型 ID、尺寸、时长、风格参数接入自己的产品或工作流。
-6. 需要放量时通过微信或支付宝充值，并按业务场景拆分 API Key 和任务队列。
+5. 查看 [公开 API 文档](./api/README.md)，补充模型、文本、图像和视频接口细节。
+6. 把稳定提示词、模型 ID、尺寸、时长、风格参数接入自己的产品或工作流。
+7. 需要放量时通过微信或支付宝充值，并按业务场景拆分 API Key 和任务队列。
 
 ## 开发者集成建议
 
@@ -106,6 +108,7 @@ Genvis AI 聚合文本推理、图像生成和视频生成模型，帮助团队�
 ## 快速开始
 
 - API 接入：阅读 [中文快速接入](./quickstart-zh.md)
+- 公开 API 文档：阅读 [docs/api](./api/README.md)
 - Node.js 示例：查看 `examples/node/`
 - Python 示例：查看 `examples/python/`
 - cURL 示例：查看 `examples/curl/`

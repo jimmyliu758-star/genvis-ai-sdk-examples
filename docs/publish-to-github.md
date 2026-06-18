@@ -1,6 +1,7 @@
 # GitHub 发布和推广说明
 
 这个仓库已经按中文用户优先的方式组织，适合放到官网 API 文档、开发者入口、社群推广内容和 AIGC 从业者试用链路里。定位是“部分前端体验展示 + 公开 API 轻量示例”，不是完整产品开源仓库。
+官网 `/docs/api` 对应的公开调用说明，也会同步放在仓库的 `docs/api/` 目录里，方便访客从 GitHub 直接跳到接口文档。
 
 ## 推荐仓库信息
 
@@ -95,6 +96,7 @@ https://genvis.xyz
 ## 后续维护
 
 - 保持 README 中文优先，英文作为辅助说明。
+- `/docs/api`、README、quickstart 和产品能力页要保持同步更新。
 - 所有对外文案必须避免“完整开源平台源码”这类误导表述。
 - 每次新增模型能力时，同步更新 README、`docs/product-capabilities-zh.md`、`.env.example` 和示例代码。
 - 视频模型参数变化时，优先更新 `video-generation` 示例。
