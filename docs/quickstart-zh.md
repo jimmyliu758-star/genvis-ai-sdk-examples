@@ -1,15 +1,27 @@
 # Genvis AI API 中文快速接入
 
-这篇文档给中文开发者一个最短路径：注册、充值、创建 API Key，然后用 Node.js、Python 或 curl 调用文本、图片和视频模型。
+这篇文档给中文开发者一个最短路径：注册领取免费额度、创建 API Key、查询可用模型，然后用 Node.js、Python 或 cURL 调用文本、图片和视频模型。
 
-## 1. 注册和充值
+如果你还不确定提示词、风格或视频参数，可以先在 Genvis AI 官网用可视化界面生成图片或视频，确认效果后再把稳定参数迁移到 API。
+
+本仓库只提供公开 API 的轻量接入示例和部分前端体验说明，不开放完整平台源码、后端实现、计费系统或模型路由逻辑。
+
+## 1. 注册并领取免费额度
 
 - 官网 / 控制台：[https://genvis.xyz](https://genvis.xyz)
 - 备用域名：[https://apitoken.fun](https://apitoken.fun)
 
-注册后进入控制台，使用微信或支付宝充值。充值完成后再创建 API Key。
+新用户注册即享 **2 美元免费试用额度**，可以零成本体验文本推理、图像生成、视频生成等能力。价格非常低，例如 **gpt-image 2 低至 ¥0.2**。如需继续放量使用，可在控制台通过微信或支付宝充值。
 
-## 2. 创建 API Key
+## 2. 选择你的使用方式
+
+| 使用方式 | 适合人群 | 说明 |
+| --- | --- | --- |
+| 标准化 API 调用 | 开发者、AI 工具站、自动化工作流 | 使用本仓库 Node.js、Python、cURL 示例，全模型统一接口，支持批量任务、异步生成、结构化素材返回 |
+| 前端可视化界面生图 | 设计师、运营、电商、自媒体 | 无需代码，可视化参数调节，支持高清图像生成、风格自定义、批量出图 |
+| 前端可视化界面生视频 | 内容团队、短视频团队、AIGC 影视创作者 | 支持文生视频、图生视频、长短视频渲染，输出影视级画面效果和流畅动态 |
+
+## 3. 创建 API Key
 
 进入控制台的令牌管理，创建一个新的 API Key。建议按项目或环境分别创建，例如：
 
@@ -20,7 +32,7 @@
 
 不要把 API Key 放到前端代码、公开 GitHub 仓库、截图或浏览器脚本里。
 
-## 3. 设置环境变量
+## 4. 设置环境变量
 
 复制示例配置：
 
@@ -45,18 +57,18 @@ GENVIS_VIDEO_MODEL=video_vidu
 GENVIS_BASE_URL=https://apitoken.fun/v1
 ```
 
-## 4. 先查询可用模型
+## 5. 查询可用模型
 
-不同账号、余额、用户组和模型权限可能不同，接入前先查模型列表：
+Genvis AI 支持 Claude4.8、GPT5.5、Gemini3.5、gpt-Image2、Nano Banao 2、Veo、sora2、GrokVideo 等旗舰模型。不同账号、余额、用户组和模型权限可能不同，接入前先查模型列表：
 
 ```bash
 curl "$GENVIS_BASE_URL/models" \
   -H "Authorization: Bearer $GENVIS_API_KEY"
 ```
 
-把返回的模型 ID 填到 `.env`。
+把返回的模型 ID 填到 `.env`。模型权限、价格和可用状态以控制台模型列表为准。
 
-## 5. Node.js 调用
+## 6. Node.js 调用
 
 安装依赖：
 
@@ -82,7 +94,7 @@ npm run image
 npm run video
 ```
 
-## 6. Python 调用
+## 7. Python 调用
 
 安装依赖：
 
@@ -110,7 +122,7 @@ python examples/python/image_generation.py
 python examples/python/video_generation.py
 ```
 
-## 7. cURL 最小示例
+## 8. cURL 最小示例
 
 文本对话：
 
@@ -162,7 +174,7 @@ curl "$GENVIS_BASE_URL/video/generations" \
   }'
 ```
 
-## 8. 常见问题
+## 9. 常见问题
 
 ### 401 鉴权失败
 
@@ -183,3 +195,11 @@ Authorization: Bearer YOUR_API_KEY
 ### 视频没有立即返回结果
 
 视频是异步任务。提交后保存任务 ID，轮询任务详情直到状态变成完成或失败。
+
+## 10. 下一步
+
+- 想了解完整产品能力：阅读 [产品能力全景](./product-capabilities-zh.md)
+- 想看公开 API 文档：阅读 [docs/api](./api/README.md)
+- 想规范对外截图范围：阅读 [前端界面展示建议](./frontend-showcase-zh.md)
+- 想直接试用可视化生图/生视频：打开 [Genvis AI 官网](https://genvis.xyz)
+- 想把示例放进自己的项目：从 `sdk/node/genvis-client.mjs` 或 `sdk/python/genvis_client.py` 开始改造
